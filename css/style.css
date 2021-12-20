@@ -368,6 +368,9 @@ nav .middle-ul {
 }
 
 @media screen and (max-width: 600px) {
+  nav .logo {
+    width: 200px;
+  }
   nav .middle-ul,
   .last-ul {
     display: none;
@@ -487,17 +490,17 @@ nav .middle-ul {
     margin-bottom: 1rem;
   }
   #client {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  margin: 10px auto;
-}
-#client .client{
-    width: 100px;
-}
-#client .row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 20px;
-}
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 10px auto;
+  }
+  #client .client {
+    width: 150px;
+  }
+  #client .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
 }
