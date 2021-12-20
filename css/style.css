@@ -382,6 +382,9 @@ nav .middle-ul {
   nav .menu img {
     width: 50px;
   }
+  .banner {
+    background-attachment: initial;
+  }
   .banner .caption {
     width: 100%;
     padding-top: 3rem;
