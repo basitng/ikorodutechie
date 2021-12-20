@@ -492,6 +492,9 @@ nav .middle-ul {
   text-align: center;
   margin: 10px auto;
 }
+#client .client{
+    width: 100px;
+}
 #client .row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
