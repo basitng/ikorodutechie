@@ -366,6 +366,66 @@ nav .middle-ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+#contact {
+  width: 100%;
+  padding: 150px 30px;
+  background: url("../svg/Illustrations.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #000, var(--clr-sec-light));
+  opacity: 0.8;
+}
+.row {
+  position: relative;
+  z-index: 80;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.contact-form {
+  width: 100%;
+}
+
+.contact-form input {
+  width: 80%;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  color: #555;
+  padding: 10px;
+  outline: none;
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+.contact-form textarea {
+  width: 80%;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  color: #555;
+  padding: 10px;
+  outline: none;
+  height: 10vh;
+}
+.contact-form .btn3 {
+  margin-top: 0.5rem;
+}
+.btn3 {
+  width: 200px;
+  height: 50px;
+  background: var(--clr-pry);
+  border-radius: 9px;
+  color: #fff;
+}
 
 @media screen and (max-width: 600px) {
   nav .logo {
@@ -506,4 +566,27 @@ nav .middle-ul {
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
   }
+  #contact{
+    padding: 50px 10px;
+  }
+  .row {
+    position: relative;
+    z-index: 80;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .contact-form :is(input, textarea){
+    width: 100%;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  #contact .header .header-h1{
+    font-size: 50px;
+  }
+}
+footer{
+  padding: 20px 10px;
+  text-align: center;
+  color:white;
 }
