@@ -5,14 +5,20 @@ const triggers = document.querySelectorAll(".modal-trigger");
 const modal = document.querySelector(".modal");
 const navItems = document.querySelectorAll(".sidebar a");
 const overlay = document.querySelector(".overlay");
+const preloader = document.querySelector("#preloader");
 
 document.addEventListener("DOMContentLoaded", startAnime);
+
+document.body.onload = () => {
+  // when the object is loaded
+  preloader.classList.add("hide-preloader");
+}
 
 const tl = gsap.timeline();
 
 function slickAnimation(){
   const tl3 = gsap.timeline();
-  tl3
+  
 }
 slickAnimation();
 
