@@ -61,6 +61,15 @@ nav {
   left: 0;
   z-index: 100;
 }
+nav a {
+  transition: 0.4s ease-in;
+}
+nav a.active {
+  color: var(--clr-pry-light);
+}
+nav a:hover {
+  color: var(--clr-pry-light);
+}
 .menu,
 .sidebar {
   display: none;
@@ -428,6 +437,9 @@ nav .middle-ul {
 }
 
 @media screen and (max-width: 600px) {
+  nav {
+    z-index: 108;
+  }
   nav .logo {
     width: 200px;
   }
@@ -438,6 +450,104 @@ nav .middle-ul {
   nav .menu {
     display: block;
     cursor: pointer;
+  }
+  .menu div {
+    width: 2rem;
+    height: 0.2rem;
+    background: #ddd;
+    border-radius: 48px;
+    position: absolute;
+    transform: translateX(-50%, -50%), rotate(0);
+  }
+  .bar1 {
+    top: 40%;
+  }
+  .bar2 {
+    background: #42445a;
+    top: 50%;
+  }
+  .menu {
+    background: var(--clr-pry);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: black;
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .sidebar > a {
+    font-size: 30px;
+    color: #555;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+  .active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .move {
+    top: 2%;
+    right: 4%;
+    position: fixed;
+  }
+
+  .overlay2 {
+    clip-path: circle(0px);
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .menu2 div {
+    width: 2rem;
+    height: 0.2rem;
+    background: #ddd;
+    border-radius: 48px;
+    position: absolute;
+    transform: translateX(-50%, -50%), rotate(0);
+  }
+  .menu2 .bar1 {
+    top: 45%;
+    transform: rotate(0deg);
+  }
+  .menu2 .bar2 {
+    top: 45%;
+    transform: rotate(0deg);
+  }
+  .menu2 {
+    background: var(--clr-pry);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    z-index: 200;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
   }
   nav .menu img {
     width: 50px;
@@ -566,7 +676,7 @@ nav .middle-ul {
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
   }
-  #contact{
+  #contact {
     padding: 50px 10px;
   }
   .row {
@@ -575,18 +685,100 @@ nav .middle-ul {
     display: grid;
     grid-template-columns: 1fr;
   }
-  .contact-form :is(input, textarea){
+  .contact-form :is(input, textarea) {
     width: 100%;
   }
   .contact-form {
     width: 100%;
   }
-  #contact .header .header-h1{
+  #contact .header .header-h1 {
     font-size: 50px;
   }
 }
-footer{
+footer {
   padding: 20px 10px;
   text-align: center;
-  color:white;
+  color: white;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: var(--clr-sec-light);
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 145;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  clip-path: circle(0);
+}
+.modal {
+  width: 600px;
+  padding: 30px 10px;
+  background: white;
+  border-radius: 9px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 150;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+}
+.modal-header {
+  padding: 10px;
+}
+.modal-header h1 {
+  color: #555;
+}
+.modal-header p {
+  color: #555;
+  width: 60%;
+}
+.modal-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.modal-body input {
+  height: 50px;
+  padding: 10px;
+  outline: none;
+  border-radius: 9px;
+  border: none;
+  background: #eee;
+  margin: 10px;
+  transition: 0.2s ease-in;
+}
+.modal-body input:hover {
+  border: 2px solid var(--clr-pry-light);
+}
+form .modal-action button {
+  width: 200px;
+  height: 55px;
+  color: #fff;
+  border-radius: 20px;
+  background: var(--clr-pry-light);
+  margin: 1rem auto;
+  display: block;
+}
+form .modal-action button:hover {
+  color: white;
+  background: rgb(34, 33, 33);
+}
+/* MRS LEKO ROTIMI */
+@media screen and (max-width: 600px) {
+  .modal {
+    width: 95%;
+    overflow-y: scroll;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    top: 70%;
+    position: absolute;
+  }
+  .modal-body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

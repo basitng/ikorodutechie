@@ -9,6 +9,8 @@
     <!-- styles -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- scripts -->
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/ScrollTrigger.js" defer></script>
     <script src="js/App.js" defer></script>
   </head>
   <body>
@@ -25,26 +27,37 @@
         <li><a href="#contact">Contact us</a></li>
       </ul>
       <ul class="last-ul">
-        <button class="btn2">Enroll now</button>
+        <button class="btn2 modal-trigger">Enroll now</button>
       </ul>
-      <div class="menu">
-        <img src="svg/menu-open.svg" alt="">
-      </div>
+       <div class="menu">
+         <img src="svg/menu-open2.svg" alt="">
+       </div>
+    </div>
     </nav>
     <!-- end navbar -->
-    <ul class="sidebar">
-      <li><a href="index.html">Home</a></li>
-        <li><a href="#about-us">About us</a></li>
-        <li><a href="#services">services</a></li>
-        <li><a href="#client">clients</a></li>
-        <li><a href="#contact">Contact us</a></li>
-    </ul>
+   <!-- MOBILE NAV -->
+    <div class="overlay2"></div>
+  <div class="sidebar">
+    
+    <div class="move">
+      <div class="menu2">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+      </div>
+    </div>
+    
+      <a href="index.html">Home</a>
+      <a href="#about-us">About us</a>
+      <a href="#services">services</a>
+      <a href="#client">clients</a>
+      <a href="#contact">Contact us</a>
+  </div>
     <!-- Banner -->
     <div class="banner">
       <div class="block1">
         <div class="caption">
           <h1 class="banner-h1">
-            Welcome to <span class="color-base">ikorodu tech awads</span>
+            Welcome to <span class="color-base">ikorodu tech awards</span>
           </h1>
           <h2 class="banner-h2">We are IT professionals</h2>
           <p class="banner-text">
@@ -53,8 +66,8 @@
           </p>
           <p>No wonder we are called the tech ninjas...</p>
           <div class="banner-action">
-            <button class="btn1">Contact us</button>
-            <button class="btn2">Enroll now</button>
+            <button class="btn1"><a href="#contact">Contact us</a></button>
+            <button class="btn2 modal-trigger">Enroll now</button>
           </div>
           <!-- end banner-actions -->
         </div>
@@ -65,8 +78,29 @@
         <img src="svg/mobile3.svg" alt="" />
       </div>
     </div>
-
     <!-- end container -->
+    <div class="overlay"></div>
+    <div class="modal">
+      <div class="modal-header">
+        <h1>Register <span>Now</span></h1>
+        <p>Hi dear , Enroll to ikorodu techie institute today...</p>
+      </div>
+      <form>
+      <div class="modal-body">
+          <input type="text" placeholder="First name">
+          <input type="text" placeholder="Middle name">
+          <input type="text" placeholder="Last name">
+          <input type="tel" placeholder="Phone number">
+          <input type="text" placeholder="Email address">
+          <input type="date" placeholder="Date of birth"> 
+          <input type="text" placeholder="Resident">
+          <input type="text" placeholder="Address">
+        </div>
+        <div class="modal-action">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
     <div class="container">
       <div class="row" id="about-us">
         <div class="col-md-6">
@@ -84,7 +118,7 @@
             ratione modi accusamus repellendus omnis consequuntur reiciendis.
           </p>
           <div class="container-action">
-            <button>Scroll down</button>
+            <button><a href="#services">Scroll down</a></button>
           </div>
         </div>
         <!--end col-->
